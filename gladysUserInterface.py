@@ -9,12 +9,28 @@ def setCurrentPos():
 	print("Set current position")
 	xC = input("Current position x:")
 	yC = input("Current position y:")
+	compute.gpsCheck(xC, yC)
+	'''mapCheck=False
+	xC=0
+	yC=0
+	while (not mapCheck):
+		xC = input("Current position x:")
+		yC = input("Current position y:")
+		mapCheck=compute.gpsCheck(xC, yC)'''
 	return (xC,yC)
 	
 def setDestPos():
 	print("Set destination position")
 	xD = input("Destination position x:")
 	yD = input("Destination position y:")
+	compute.gpsCheck(xD, yD)
+	'''mapCheck=False
+	xD=0
+	yD=0
+	while (not mapCheck):
+		xD = input("Destination position x:")
+		yD = input("Destination position y:")
+		mapCheck=compute.gpsCheck(xD, yD)'''	
 	return (xD,yD)
 
 def getDistance(cur, dest):

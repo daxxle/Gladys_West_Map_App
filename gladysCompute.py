@@ -1,38 +1,24 @@
+import math
 import gladysSatellite as satellite
-
 """
-    Student: Gabriel Solomon
+    Student: Dang Le
     Module: gladysCompute
     Description: This module does …
 """
 
 
+
 def gpsAverage(x, y):
-    """
-document your function definition here. what does it do?
-"""
 
-    """
-    delete the remaining code *in this function* and replace it with
-    your own code. add more code to do what the assignment asks of you.
-    """
+    value = satellite.gpsValue(x, y, "latitude") + satellite.gpsValue(x, y, "longitude") + satellite.gpsValue(x, y, "altitude") + satellite.gpsValue(x, y, "longtitude") + satellite.gpsValue(x, y, "time") 
 
-    value = satellite.gpsValue(5, 6, "altitude")
-
-    average = value / 2
+    average = value / 4
 
     return average
 
 
-def distance(current, destination):
-    """
-    document your function definition here. what does it do?
-    """
+def distance(cur, dest):
 
-    """
-    delete the remaining code *in this function* and replace it with
-    your own code. add more code to do what the assignment asks of you.
-    """
-    distance = gpsAverage(3, 4)
+    distance = math.sqrt(gpsAverage(cur[0], cur[1])**2 + gpsAverage(dest[0], dest[1])**2)
 
     return distance

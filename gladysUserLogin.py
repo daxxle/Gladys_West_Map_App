@@ -1,9 +1,12 @@
+
+import re
+
 """
 Student: Dang Le
 Module: gladysUserLogin
-Description: This module does …
+Description: This module does check user/password login valid/invalid
+Valid login user should be an email address
 """
-import re
 
 def login():
     """

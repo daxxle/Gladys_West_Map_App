@@ -1,7 +1,7 @@
-import json
 
+import json
 """
-    Student: Gabriel Solomon
+    Student: Dang Le
     Module: gladysSatellite
     Description: This module does …
 """
@@ -54,7 +54,7 @@ def gpsValue(x, y, sat):
         You can/should remove this long comment before you submit your work.
         I'm just giving advice to try to help you. Good luck!  -Gabriel :)
     """
-    pathToJSONDataFiles = "C:/Users/Dle/Documents/GitHub/Gladys_West_Map_App/data"
+    pathToJSONDataFiles = "C:/Users/haida/Documents/GitHub/Gladys_West_Map_App/data"
 
     # read the satellite data
     data = readSat(sat, pathToJSONDataFiles)
@@ -68,6 +68,8 @@ def gpsValue(x, y, sat):
         to understand better, open and look at the json satellite data in
         vs code.
     """
+    print(data)
     value = 1234
 
     return value
+    

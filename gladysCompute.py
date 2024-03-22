@@ -10,7 +10,7 @@ import gladysSatellite as satellite
 
 def gpsAverage(x, y):
 
-    value = satellite.gpsValue(x, y, "latitude") + satellite.gpsValue(x, y, "longitude") + satellite.gpsValue(x, y, "altitude") + satellite.gpsValue(x, y, "longtitude") + satellite.gpsValue(x, y, "time") 
+    value = satellite.gpsValue(x, y, "latitude") + satellite.gpsValue(x, y, "longitude") + satellite.gpsValue(x, y, "altitude") + satellite.gpsValue(x, y, "time") 
 
     average = value / 4
 

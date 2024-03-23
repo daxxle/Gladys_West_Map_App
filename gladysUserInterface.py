@@ -1,36 +1,28 @@
 import io
-
 import gladysCompute as compute
 import gladysSatellite as satellite
 import gladysUserLogin as userLogin
 
-
 def setCurrentPos():
 	print("Set current position")
-	xC = input("Current position x:")
-	yC = input("Current position y:")
-	compute.gpsCheck(xC, yC)
-	'''mapCheck=False
+	mapCheck=False
 	xC=0
 	yC=0
 	while (not mapCheck):
 		xC = input("Current position x:")
 		yC = input("Current position y:")
-		mapCheck=compute.gpsCheck(xC, yC)'''
+		mapCheck=compute.gpsCheck(xC, yC)
 	return (xC,yC)
 	
 def setDestPos():
 	print("Set destination position")
-	xD = input("Destination position x:")
-	yD = input("Destination position y:")
-	compute.gpsCheck(xD, yD)
-	'''mapCheck=False
+	mapCheck=False
 	xD=0
 	yD=0
 	while (not mapCheck):
 		xD = input("Destination position x:")
 		yD = input("Destination position y:")
-		mapCheck=compute.gpsCheck(xD, yD)'''	
+		mapCheck=compute.gpsCheck(xD, yD)	
 	return (xD,yD)
 
 def getDistance(cur, dest):
@@ -78,7 +70,7 @@ def runApp(userName):
 		print("[c] Type c to set current position")
 		print("[d] Type d to set destination position")
 		print("[m] Type m to map – which tells the distance")
-		print("[t] Type t to run module tests (random choice [c,d,m])")
+		print("[t] Type t to run module tests")
 		print("[q] Type q to quit")
 		print()
 

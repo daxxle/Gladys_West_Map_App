@@ -39,16 +39,19 @@ def gpsValue(x, y, sat):
      document your function definition here. what does it do?
     """
 
-    pathToJSONDataFiles = "C:/Users/dle/Documents/GitHub/Gladys_West_Map_App/data"
+    pathToJSONDataFiles = "C:/Users/haida/Documents/GitHub/Gladys_West_Map_App/data"
 
     # read the satellite data
     data = readSat(sat, pathToJSONDataFiles)
     value = -1
-    for i,j,k in data.items():
-        if x==i and y==j:
-            print(k)
-            value=k
+    for i in data:
+        xpos = list(i.values())[0]
+        ypos = list(i.values())[1]
+        value = list(i.values())[2]
+        if (x==xpos) and (y==ypos):
+            print(f"Match ({xpos}, {ypos}) -> value={value}")
             return value
+            
     return value       
 
     

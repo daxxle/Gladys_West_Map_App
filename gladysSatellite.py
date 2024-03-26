@@ -43,16 +43,14 @@ def gpsValue(x, y, sat):
 
     # read the satellite data
     data = readSat(sat, pathToJSONDataFiles)
-    value = -1
-    for i in data:
-        xpos = list(i.values())[0]
-        ypos = list(i.values())[1]
-        value = list(i.values())[2]
-        if (x==xpos) and (y==ypos):
-            print(f"Match ({xpos}, {ypos}) -> value={value}")
-            return value
-            
-    return value       
+    for i in data:  
+        xpos = i.get("x")
+        ypos = i.get("y")
+        value = i.get("value")
+        if (x==i.get("x")) and (y==ypos):
+            return value     
+    print(f"ERROR: Can't find the value for ({x},{y}) in satellite = {sat}")
+    return -1       
 
     
     

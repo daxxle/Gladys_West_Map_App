@@ -3,10 +3,13 @@ import gladysSatellite as satellite
 """
     Student: Dang Le
     Module: gladysCompute
-    Description: This module does …
+    Description: This module does print GPS Value/Check/Average/Distance
 """
 
 def gpsPrint(x, y):
+    '''
+        return string of GPS value latitude, longitude, altitude, & time
+    '''
     latitude = satellite.gpsValue(x, y, "latitude")
     longitude = satellite.gpsValue(x, y, "longitude")
     altitude = satellite.gpsValue(x, y, "altitude")
@@ -15,6 +18,9 @@ def gpsPrint(x, y):
     return str
 
 def gpsCheck(x, y):
+    ''' 
+        return True/False of point (x,y) matched GPS value latitude, longitude, altitude, & time or not
+    '''
     latitude = satellite.gpsValue(x, y, "latitude")
     longitude = satellite.gpsValue(x, y, "longitude")
     altitude = satellite.gpsValue(x, y, "altitude")
@@ -27,16 +33,18 @@ def gpsCheck(x, y):
     return mapCheck
 
 def gpsAverage(x, y):
-
+    '''
+        return Average of point (x,y) between GPS value latitude, longitude, altitude, & time
+    '''
     value = satellite.gpsValue(x, y, "latitude") + satellite.gpsValue(x, y, "longitude") + satellite.gpsValue(x, y, "altitude") + satellite.gpsValue(x, y, "time") 
-
     average = value / 4
 
     return average
 
 
 def distance(cur, dest):
-
+    '''
+        return distance of current point and destination point
+    '''
     distance = math.sqrt(gpsAverage(cur[0], cur[1])**2 + gpsAverage(dest[0], dest[1])**2)
-
     return distance

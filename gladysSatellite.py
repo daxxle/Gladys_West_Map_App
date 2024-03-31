@@ -5,7 +5,7 @@ import numpy as np
 """
     Student: Dang Le
     Module: gladysSatellite
-    Description: This module does …
+    Description: This module does read Satellite & calculate GPS Value of each satellite
 """
 
 
@@ -36,7 +36,7 @@ def readSat(sat, pathToJSONDataFiles):
 
 def gpsValue(x, y, sat):
     """
-     document your function definition here. what does it do?
+     read point(x,y) and satellite, then return GPS Value matched json file; if not return -1
     """
 
     pathToJSONDataFiles = "C:/Users/haida/Documents/GitHub/Gladys_West_Map_App/data"

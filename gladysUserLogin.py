@@ -10,9 +10,11 @@ Valid login user should be an email address
 """
 
 def login():
-    """
-    document your function definition here. what does it do?
-    """
+    '''
+        Function login() 
+            check username valid/invalid with email address format;
+            password input like Unix password not shown on screen;
+    '''
     emailAddress = ""
     userPwd=""
     chkInput=True
